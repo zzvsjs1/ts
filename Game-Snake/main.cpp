@@ -3,6 +3,7 @@
 
 #include <random>
 #include <limits>
+#include <numeric>
 
 namespace dir_vec
 {
@@ -20,11 +21,11 @@ static olc::vd2d getFourPointVec(const olc::vd2d& topLeft, const olc::vd2d& size
 {
 	switch (dir)
 	{
-	case DIR_ENUM::TOP_LEFT: return topLeft;
-	case DIR_ENUM::TOP_RIGHT: return { topLeft.x + size.x, topLeft.y };
-	case DIR_ENUM::LOWER_LEFT: return { topLeft.x, topLeft.y + size.y };
-	case DIR_ENUM::LOWER_RIGHT: return { topLeft.x + size.x, topLeft.y + size.y };
-	default: return topLeft;
+		case DIR_ENUM::TOP_LEFT: return topLeft;
+		case DIR_ENUM::TOP_RIGHT: return { topLeft.x + size.x, topLeft.y };
+		case DIR_ENUM::LOWER_LEFT: return { topLeft.x, topLeft.y + size.y };
+		case DIR_ENUM::LOWER_RIGHT: return { topLeft.x + size.x, topLeft.y + size.y };
+		default: return topLeft;
 	}
 }
 

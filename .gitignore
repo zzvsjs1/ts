@@ -28,7 +28,7 @@
 *.so
 *.so.*
 *.dylib
-
+/Game-Snake/X64
 # Executables
 *.exe
 *.out
